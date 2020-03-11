@@ -1,0 +1,19 @@
+
+button{
+  text-align: center;
+  /* margin: 10px; */
+  padding: 10px 0;
+}
+
+/* input{
+  margin: 10px;
+  padding: 5px;
+} */
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
