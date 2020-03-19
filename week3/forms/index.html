@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  <title>web forms</title>
+</head>
+<body>
+  <center>
+    <div>I have a border, an outline, AND a box shadow! Amazing, isn't it?</div>
+    <div>
+      <form class="" action="mailto:2018004003@itpt.co.uk" enctype='text/plain  charset=ISO-8859-1'
+      method="post"><br></br>
+
+      <label for="username">Please enter your username</label>
+      <input type="text" name="username" placeholder="enter username" id="username"><br></br>
+      <label for="pword">Please enter your password</label>
+      <input type="password" name="pword" placeholder="enter password" id="pword"><br></br>
+
+      <br></br>
+      <!--textarea   -->
+      <div textarea name="summary" id="summary" rows="8" cols="80"></textarea></div>
+      <br></br>
+      <!--checkbox options demo -static -->
+      <label for="menulist" id="menulist">Colour :</label>
+      <br></br>
+      <input type="checkbox" id="menulist" name="red" value="" checked>
+      <label for="menulist" id="menulist">Red</label>
+      <input type="checkbox" id="menulist" name="blue" value="">
+      <label for="menulist" id="menulist">Blue</label>
+      <br></br>
+      <!--select option list -->
+      <select name="instrumentList" required>
+        <option value="violen">Playing Violen</option>
+        <option value="piano">Playing Piano</option>
+        <option value="triangle">Playing Triangle</option>
+      </select>
+      <br></br>
+      <!--fieldset legend option -->
+      <fieldset rows="8" cols="80">
+        <legend>Choose your favourite Pet </legend>
+        <input type="radio" name="pet" id="cat" value="cat">
+        <label for="cat">Cat</label>
+        <input type="radio" name="pet" id="dog" value="dog">
+        <label for="dog">Dog</label>
+      </fieldset>
+
+      <br></br><br>
+      <!--select option group legend option -->
+      <select class="" id="shopping" name="" required>
+        <optgroup label="Food">
+          <option value="pears" >Pears</option>
+          <option value="banana">Banana</option>
+        </optgroup>
+
+        <optgroup label="Stationary" rows="8" cols="80">
+          <option value="pencil" >Pencil</option>
+          <option value="paper">Paper</option>
+          <option value="eraser">eraser</option>
+        </optgroup>
+      </select>
+      <br><br>
+
+      <input type="reset" value="Reset the form">
+      <button type="submit" name="button">Submit Details</button>
+    </form>
+  </div>
+</center>
+</body>
+<footer>David Fulton
+<!-- <img src=""> -->
+</footer>
+</html>

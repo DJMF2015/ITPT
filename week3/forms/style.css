@@ -1,0 +1,30 @@
+
+label, button, input {
+  display: table-cell;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-stretch: semi-expanded;
+}
+
+label {
+  padding-right: 10px;
+}
+
+div{
+
+  border: 0.5rem outset teal;
+  outline: 0.5rem solid khaki;
+  box-shadow: 0 0 0 2rem silver;
+  border-radius: 12px;
+  font: bold 1rem sans-serif;
+  margin: 2rem;
+  padding: 1rem;
+  outline-offset: 0.5rem;
+}
+footer{
+  text-align: center;
+  bottom: sticky;
+  background-color: forestgreen;
+  font-family: cursive;
+  font-size: 18px;
+}
