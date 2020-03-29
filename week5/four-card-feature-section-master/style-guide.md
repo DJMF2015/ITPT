@@ -8,7 +8,8 @@ The designs were created to the following widths:
 - Desktop: 1440px
 
 ## Colors
-
+<!-- //to compile scss -->
+<!-- sass --watch input.scss output.css -->
 ### Primary
 
 - Red: hsl(0, 78%, 62%)
@@ -30,5 +31,5 @@ The designs were created to the following widths:
 
 ### Fonts
 
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 200, 400, 600
+  - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+  - Weights: 200, 400, 600
