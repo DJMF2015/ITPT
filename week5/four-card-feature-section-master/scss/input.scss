@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+$font-stack:  'Poppins', sans-serif;
+// ### Primary
+$primary-red: hsl(0, 78%, 62%);
+$primary-cyan:hsl(180, 62%, 55%);
+$primary-orange: hsl(34, 97%, 64%);
+$primary-blue: hsl(212, 86%, 64%);
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body{
+  font: 15px;
+  font-family: $font-stack;
+  color: $primary-cyan;
+  // background-color: $primary-blue;
+}
+
+//sass --watch input.scss output.css
+
+//nesting example...
+// nav {
+//   ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+//   }
+//
+//   li { display: inline-block; }
+//
+//   a {
+//     display: block;
+//     padding: 6px 12px;
+//     text-decoration: none;
+//   }
+// }
