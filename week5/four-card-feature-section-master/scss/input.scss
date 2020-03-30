@@ -18,22 +18,33 @@ $primary-very-light-gray: hsl(0, 0%, 98%);
   box-sizing: border-box;
 }
 
- h2 {
+.box-container {
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+.head {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60vw;
+    display: block;
+    line-height: 20px;
+    width: 480px;
+    margin-bottom: 50px;
+}
+
+h2 {
   line-height: 1.6;
   color: $primary-title;
   text-align: center;
-}
-
-#root {
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 body{
   font: 15px;
   font-family: $font-stack;
   color: $primary-very-dark-blue;
-  // background-color: $primary-blue;
 }
 
 .attribution {
@@ -60,59 +71,86 @@ img{
 }
 
 .container{
-  // display: inline-flex;
-  // flex-wrap:  wrap;
+  display:  flex;
+  flex-wrap:  wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1140px;
+
 }
 
 .card{
-  min-width: 200px;
-  // margin: 50px 400px 50px 400px;
-  margin: 50px 250px;
-  background: #F6F6F8;
-  box-shadow: 2px 2px 10px rgba(0,0,0.1);
+  // min-width: 200px;
+  margin: 15px;
+  width: 350px; //new
+  background: #fff;
+  box-shadow:  0 10px 20px rgba(0,0,0.06), 0 6px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  // border-top-style: dashed;
-  // text-align: center;
   overflow: hidden;
   transition: all .2 linear;
+  padding: 30px; //new
+  border-radius: 5px;
+  position: relative; //new
+
 }
 
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
 
 .card:hover{
-  box-shadow: 2px 8px 25px rgba(0,0,0,.15);
+  box-shadow: 2px 8px 20px rgba(0,0,0,.015);
   transform: translate3d(0,-2px, 0);
 }
-.supervisor{
-    border-top: 5px solid $primary-cyan;
-    padding-left: 10px;
+.supervisor-cyan{
+  border-top: 5px solid $primary-cyan;
+  padding-left: 10px;
 }
-.calculator{
- border-top: 5px solid $primary-blue;
- padding-left: 10px;
- margin-left: 400px;
+.calculator-blue {
+  border-top: 5px solid $primary-blue;
+  padding-left: 10px;
+  margin-left: 400px;
 }
-.karma{
+.karma-orange{
   border-top: 5px solid $primary-orange;
   padding-left: 10px;
 }
-.teambuilder{
+.teambuilder-red{
   border-top: 5px solid $primary-red;
   padding-left: 10px;
 }
-//sass --watch input.scss output.css
-@media screen and (min-width: 600px) {
-  .card {
-    flex: 1 1 calc(50% - 2rem);
-  }
+
+.teambuilder-red::after {
+    background-color: hsl(0, 78%, 62%);
 }
 
-@media screen and (min-width: 900px) {
-  .card {
-    flex: 1 1 calc(33% - 2rem);
-  }
+footer {
+  text-align: center;
 }
 
+// sass --watch scss:css
+// @media screen and (min-width: 600px) {
+//   .card {
+//     flex: 1 1 calc(50% - 2rem);
+//   }
+// }
+//
+// @media screen and (min-width: 900px) {
+//   .card {
+//     flex: 1 1 calc(33% - 2rem);
+//   }
+// }
 
+// .wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-gap: 10px;
+// }
 //nesting example...
 // nav {
 //   ul {

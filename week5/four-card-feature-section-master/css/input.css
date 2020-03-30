@@ -3,15 +3,27 @@
   box-sizing: border-box;
 }
 
+.box-container {
+  padding: 0;
+  margin: 0;
+  top: 0;
+}
+
+.head {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 60vw;
+  display: block;
+  line-height: 20px;
+  width: 480px;
+  margin-bottom: 50px;
+}
+
 h2 {
   line-height: 1.6;
   color: #585352;
   text-align: center;
-}
-
-#root {
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 body {
@@ -45,51 +57,68 @@ img {
   padding-bottom: 5px;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
 .card {
-  min-width: 200px;
-  margin: 50px 250px;
-  background: #F6F6F8;
-  box-shadow: 2px 2px 10px black;
+  margin: 15px;
+  width: 350px;
+  background: #fff;
+  box-shadow: 0 10px 20px black, 0 6px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.2 linear;
+  padding: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
 }
 
 .card:hover {
-  box-shadow: 2px 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.015);
   transform: translate3d(0, -2px, 0);
 }
 
-.supervisor {
+.supervisor-cyan {
   border-top: 5px solid #45d3d3;
   padding-left: 10px;
 }
 
-.calculator {
+.calculator-blue {
   border-top: 5px solid #549ef2;
   padding-left: 10px;
   margin-left: 400px;
 }
 
-.karma {
+.karma-orange {
   border-top: 5px solid #fcaf4a;
   padding-left: 10px;
 }
 
-.teambuilder {
+.teambuilder-red {
   border-top: 5px solid #ea5353;
   padding-left: 10px;
 }
 
-@media screen and (min-width: 600px) {
-  .card {
-    flex: 1 1 calc(50% - 2rem);
-  }
+.teambuilder-red::after {
+  background-color: #ea5353;
 }
-@media screen and (min-width: 900px) {
-  .card {
-    flex: 1 1 calc(33% - 2rem);
-  }
+
+footer {
+  text-align: center;
 }
 
 /*# sourceMappingURL=input.css.map */
