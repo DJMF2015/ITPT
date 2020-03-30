@@ -16,23 +16,18 @@ $primary-very-light-gray: hsl(0, 0%, 98%);
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-.box-container {
-    padding: 0;
-    margin: 0;
-    top: 0;
+header {
+  margin: 40px auto;
+  max-width: 500px;
+  text-align: center;
 }
 
-.head {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 60vw;
-    display: block;
-    line-height: 20px;
-    width: 480px;
-    margin-bottom: 50px;
+body{
+  background-color: hsl(0, 0%, 98%);
+  font-family: 'Poppins', sans-serif;
 }
 
 h2 {
@@ -41,25 +36,30 @@ h2 {
   text-align: center;
 }
 
-body{
-  font: 15px;
-  font-family: $font-stack;
-  color: $primary-very-dark-blue;
+h1 {
+  font-weight: 200;
+  margin: 0;
 }
 
-.attribution {
-  font-size: 11px; text-align: center;
+h1 span {
+  font-weight: 600;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.card h2 {
+  margin: 0;
+  text-align: left;
 }
 
 p{
-  padding: 0 1.5rem 1.5rem;
+  // padding: 0 1.5rem 1.5rem;
   margin: 0;
-  color: $primary-very-dark-blue;
+  color: $primary-grayish-blue;
 }
 
+.card p {
+  font-size: 14px;
+  margin: 15px 0 40px;
+}
 img{
   display: block;
   margin: 1rem auto;
@@ -70,43 +70,33 @@ img{
   padding-bottom: 5px;
 }
 
-.container{
-  display:  flex;
-  flex-wrap:  wrap;
+.card-container {
+  flex-wrap: wrap;
+  display: flex;
   justify-content: center;
+  padding: 5px;
   margin: 0 auto;
   max-width: 1140px;
-
 }
 
 .card{
-  // min-width: 200px;
+  background-color: #fff;
+  box-shadow:  0 10px 20px rgba(0,0,0.16), 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 30px; //new
+  position: relative; //new
+  overflow: hidden;
   margin: 15px;
   width: 350px; //new
-  background: #fff;
-  box-shadow:  0 10px 20px rgba(0,0,0.06), 0 6px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
   transition: all .2 linear;
-  padding: 30px; //new
-  border-radius: 5px;
-  position: relative; //new
-
+  z-index: -1;
 }
 
-.card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 100%;
-}
 
 .card:hover{
-  box-shadow: 2px 8px 20px rgba(0,0,0,.015);
-  transform: translate3d(0,-2px, 0);
+  box-shadow: 1px 8px 20px rgba(1,0,1,.55);
 }
+
 .supervisor-cyan{
   border-top: 5px solid $primary-cyan;
   padding-left: 10px;
@@ -114,56 +104,29 @@ img{
 .calculator-blue {
   border-top: 5px solid $primary-blue;
   padding-left: 10px;
-  margin-left: 400px;
+
 }
 .karma-orange{
   border-top: 5px solid $primary-orange;
   padding-left: 10px;
+  transform: translateY(6.5%);
 }
 .teambuilder-red{
   border-top: 5px solid $primary-red;
   padding-left: 10px;
-}
-
-.teambuilder-red::after {
-    background-color: hsl(0, 78%, 62%);
+  transform: translateY(-12.5%);
+  margin: 23px 0px 15px 0px; //top right bottom left
 }
 
 footer {
   text-align: center;
+  clear: both;
+  margin : 0;
 }
 
-// sass --watch scss:css
-// @media screen and (min-width: 600px) {
-//   .card {
-//     flex: 1 1 calc(50% - 2rem);
-//   }
-// }
-//
-// @media screen and (min-width: 900px) {
-//   .card {
-//     flex: 1 1 calc(33% - 2rem);
-//   }
-// }
 
-// .wrapper {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   grid-gap: 10px;
-// }
-//nesting example...
-// nav {
-//   ul {
-//     margin: 0;
-//     padding: 0;
-//     list-style: none;
-//   }
-//
-//   li { display: inline-block; }
-//
-//   a {
-//     display: block;
-//     padding: 6px 12px;
-//     text-decoration: none;
-//   }
-// }
+@media screen and (min-width: 775px) {
+  .card-push {
+    transform: rotateY(0);
+  }
+}
