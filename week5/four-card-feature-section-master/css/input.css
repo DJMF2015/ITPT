@@ -1,23 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
 * {
   box-sizing: border-box;
-}
-
-.box-container {
-  padding: 0;
   margin: 0;
-  top: 0;
 }
 
-.head {
-  margin-left: auto;
-  margin-right: auto;
+header {
+  margin: 40px auto;
+  max-width: 500px;
   text-align: center;
-  width: 60vw;
-  display: block;
-  line-height: 20px;
-  width: 480px;
-  margin-bottom: 50px;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
 }
 
 h2 {
@@ -26,25 +21,28 @@ h2 {
   text-align: center;
 }
 
-body {
-  font: 15px;
-  font-family: "Poppins", sans-serif;
-  color: #4c4e61;
+h1 {
+  font-weight: 200;
+  margin: 0;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+h1 span {
+  font-weight: 600;
 }
 
-.attribution a {
-  color: #3e52a3;
+.card h2 {
+  margin: 0;
+  text-align: left;
 }
 
 p {
-  padding: 0 1.5rem 1.5rem;
   margin: 0;
-  color: #4c4e61;
+  color: #a3a5ae;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 15px 0 40px;
 }
 
 img {
@@ -57,39 +55,30 @@ img {
   padding-bottom: 5px;
 }
 
-.container {
-  display: flex;
+.card-container {
   flex-wrap: wrap;
+  display: flex;
   justify-content: center;
+  padding: 5px;
   margin: 0 auto;
   max-width: 1140px;
 }
 
 .card {
+  background-color: #fff;
+  box-shadow: 0 10px 20px black, 0 6px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
   margin: 15px;
   width: 350px;
-  background: #fff;
-  box-shadow: 0 10px 20px black, 0 6px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
   transition: all 0.2 linear;
-  padding: 30px;
-  border-radius: 5px;
-  position: relative;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 100%;
+  z-index: -1;
 }
 
 .card:hover {
-  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.015);
-  transform: translate3d(0, -2px, 0);
+  box-shadow: 1px 8px 20px rgba(1, 0, 1, 0.55);
 }
 
 .supervisor-cyan {
@@ -100,25 +89,31 @@ img {
 .calculator-blue {
   border-top: 5px solid #549ef2;
   padding-left: 10px;
-  margin-left: 400px;
 }
 
 .karma-orange {
   border-top: 5px solid #fcaf4a;
   padding-left: 10px;
+  transform: translateY(6.5%);
 }
 
 .teambuilder-red {
   border-top: 5px solid #ea5353;
   padding-left: 10px;
-}
-
-.teambuilder-red::after {
-  background-color: #ea5353;
+  transform: translateY(-12.5%);
+  margin: 23px 0px 15px 0px;
 }
 
 footer {
   text-align: center;
+  clear: both;
+  margin: 0;
+}
+
+@media screen and (min-width: 775px) {
+  .card-push {
+    transform: rotateY(0);
+  }
 }
 
 /*# sourceMappingURL=input.css.map */
