@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 3px;
 }
 
 header {
@@ -17,7 +17,6 @@ body {
 
 h2 {
   line-height: 1.6;
-  color: #585352;
   text-align: center;
 }
 
@@ -59,7 +58,7 @@ img {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
   margin: 0 auto;
   max-width: 1140px;
 }
@@ -68,13 +67,8 @@ img {
   background-color: #fff;
   box-shadow: 0 10px 20px black, 0 6px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  padding: 30px;
-  position: relative;
-  overflow: hidden;
   margin: 15px;
   width: 350px;
-  transition: all 0.2 linear;
-  z-index: -1;
 }
 
 .card:hover {
@@ -86,6 +80,13 @@ img {
   padding-left: 10px;
 }
 
+.teambuilder-red {
+  border-top: 5px solid #ea5353;
+  padding-left: 10px;
+  transform: translateY(-12.5%);
+  margin: 19px 0px 10px 0px;
+}
+
 .calculator-blue {
   border-top: 5px solid #549ef2;
   padding-left: 10px;
@@ -94,20 +95,17 @@ img {
 .karma-orange {
   border-top: 5px solid #fcaf4a;
   padding-left: 10px;
-  transform: translateY(6.5%);
-}
-
-.teambuilder-red {
-  border-top: 5px solid #ea5353;
-  padding-left: 10px;
-  transform: translateY(-12.5%);
-  margin: 23px 0px 15px 0px;
 }
 
 footer {
-  text-align: center;
-  clear: both;
+  border-color: #bbbbbb;
+  background-color: #f0e9e9;
   margin: 0;
+  bottom: 0;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 }
 
 @media screen and (min-width: 775px) {

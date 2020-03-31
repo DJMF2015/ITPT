@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
 $font-stack:  'Poppins', sans-serif;
+
 // ### Primary colours
 $primary-red: hsl(0, 78%, 62%);
 $primary-cyan:hsl(180, 62%, 55%);
 $primary-orange: hsl(34, 97%, 64%);
 $primary-blue: hsl(212, 86%, 64%);
 $primary-title: #585352;
+
 // ### Neutral
 $primary-very-dark-blue: hsl(234, 12%, 34%);
 $primary-grayish-blue: hsl(229, 6%, 66%);
@@ -16,7 +18,7 @@ $primary-very-light-gray: hsl(0, 0%, 98%);
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 3px;
 }
 
 header {
@@ -32,7 +34,6 @@ body{
 
 h2 {
   line-height: 1.6;
-  color: $primary-title;
   text-align: center;
 }
 
@@ -51,7 +52,6 @@ h1 span {
 }
 
 p{
-  // padding: 0 1.5rem 1.5rem;
   margin: 0;
   color: $primary-grayish-blue;
 }
@@ -60,6 +60,7 @@ p{
   font-size: 14px;
   margin: 15px 0 40px;
 }
+
 img{
   display: block;
   margin: 1rem auto;
@@ -74,7 +75,7 @@ img{
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
   margin: 0 auto;
   max-width: 1140px;
 }
@@ -83,15 +84,10 @@ img{
   background-color: #fff;
   box-shadow:  0 10px 20px rgba(0,0,0.16), 0 6px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  padding: 30px; //new
-  position: relative; //new
-  overflow: hidden;
+  // padding: 30px;
   margin: 15px;
-  width: 350px; //new
-  transition: all .2 linear;
-  z-index: -1;
+  width: 350px;
 }
-
 
 .card:hover{
   box-shadow: 1px 8px 20px rgba(1,0,1,.55);
@@ -100,7 +96,16 @@ img{
 .supervisor-cyan{
   border-top: 5px solid $primary-cyan;
   padding-left: 10px;
+
 }
+
+.teambuilder-red{
+  border-top: 5px solid $primary-red;
+  padding-left: 10px;
+  transform: translateY(-12.5%);
+  margin: 19px 0px 10px 0px;  //top right bottom left
+}
+
 .calculator-blue {
   border-top: 5px solid $primary-blue;
   padding-left: 10px;
@@ -109,21 +114,18 @@ img{
 .karma-orange{
   border-top: 5px solid $primary-orange;
   padding-left: 10px;
-  transform: translateY(6.5%);
-}
-.teambuilder-red{
-  border-top: 5px solid $primary-red;
-  padding-left: 10px;
-  transform: translateY(-12.5%);
-  margin: 23px 0px 15px 0px; //top right bottom left
 }
 
 footer {
-  text-align: center;
-  clear: both;
-  margin : 0;
+  border-color: rgb(187, 187, 187);
+  background-color: rgb(240, 233, 233);
+  margin: 0;
+  bottom: 0;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 }
-
 
 @media screen and (min-width: 775px) {
   .card-push {
