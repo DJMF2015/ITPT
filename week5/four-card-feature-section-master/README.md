@@ -3,9 +3,9 @@
 ![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)
 
 
-#### challenge attempt can be viewed below:
+#### Challenge attempt can be viewed below:
 
-https://tinyurl.com/fourcard
+https://tinyurl.com/wdn68sg
 
 
 -----------------------------------
