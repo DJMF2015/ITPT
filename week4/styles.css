@@ -13,21 +13,7 @@ body{
   font-family: helvetica , arial, sans-serif;
   text-align: center;
   text-transform: capitalize;
-}
-
-.skill-row {
-  width: 50%;
-  /*margin*/
-  margin: 0 auto; /* auto centre content*/
-}
-
-.skill-row > p  {
-  margin: 100px 0px 100px 0px;
-}
-
-.skills{
-  line-height: 1.5;
-
+  background-color: ghostwhite;
 }
 
 p  {
@@ -44,17 +30,29 @@ h3{
   text-align: center;
   padding: 25px;
 }
-
-hr{
-  color: #EAF6F6;
+.skill-row {
+  width: 50%;
+  /*margin*/
+  margin: 0 auto; /* auto centre content*/
 }
 
+.skill-row > p  {
+  margin: 100px 0px 100px 0px;
+}
+
+.skills{
+  line-height: 1.5;
+}
+
+
+hr{
+  color: solid #EAF6F6;
+}
 
 img{
   width: 15%;
   float: left;
-  display: inline-flex;
-  padding: 10px;
+  margin:0;
 }
 
 /* EXAMPLE:
@@ -67,19 +65,28 @@ width: 439px;
 border: 2px solid ~b9b1bf;
 } */
 
-.middle-container{
-
+.profile > h2{
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
 }
-
 .profile > p{
   text-align: center;
+  background-color: white;
 }
 .contact-me > p{
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .bottom-container > p{
   text-align: center;
+  height: 30px;
+  font-style: italic;
+  padding-top: 10px;
+  background-color:  #b0afc0;
+  border-top: 10px solid white;
+  width: 100%;
 }
 /* <!-- Make each skill row only 50% on the screen width
 restore the skill row to the center of the screen using margin property.
