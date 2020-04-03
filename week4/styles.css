@@ -1,17 +1,92 @@
-.yellow{
-  background-color:yellow;
-  height:200px;
-  width:200px;
+/*
+Resetting styles
+To avoid pages looking quite different when loading in different browsers.
+*/
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* box-sizing: border-box;/* prevents element from adding padding & border to width */ */
 }
 
-.red{
-  background-color:red;
-  height:200px;
-  width:200px;
+body{
+  font-family: helvetica , arial, sans-serif;
+  text-align: center;
+  text-transform: capitalize;
 }
 
-.blue{
-  background-color:blue;
-  height:200px;
-  width:200px;
- }
+.skill-row {
+  width: 50%;
+  /*margin*/
+  margin: 0 auto; /* auto centre content*/
+}
+
+.skill-row > p  {
+  margin: 100px 0px 100px 0px;
+}
+
+.skills{
+  line-height: 1.5;
+
+}
+
+p  {
+  text-align: left;
+  text-transform: none;
+}
+
+h2{
+  padding: 25px;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  padding: 25px;
+}
+
+hr{
+  color: #EAF6F6;
+}
+
+
+img{
+  width: 15%;
+  float: left;
+  display: inline-flex;
+  padding: 10px;
+}
+
+/* EXAMPLE:
+change the styling of some of these images by defining a more specific selector.
+This will supersede the img selector above
+*/
+/* .bigimg img {
+margin:15px 2px;
+width: 439px;
+border: 2px solid ~b9b1bf;
+} */
+
+.middle-container{
+
+}
+
+.profile > p{
+  text-align: center;
+}
+.contact-me > p{
+  text-align: center;
+}
+
+.bottom-container > p{
+  text-align: center;
+}
+/* <!-- Make each skill row only 50% on the screen width
+restore the skill row to the center of the screen using margin property.
+Add 100px margin on the top and bottom of both the skills so they are separated from each other
+Make the skill text left aligned on both, so we are overwriting the default body css of text centre align
+Double the line height of skill text so we can have space between title and and text
+change the width of the skill image to 25%. so its not gigantic
+make the image to float on the left or interchanged so the text can wrap around the image
+Add left or right 30% space depending upon your image float above so the text is not sequenced in the image
+Change the <hr> to ..... and add the colour #EAF6F6 --> */
