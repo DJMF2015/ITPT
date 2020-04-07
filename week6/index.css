@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+#title{
+  background-color: #ff4c68;
+  color: #fff;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand{
+  font-size: 2.5rem !important;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+.nav-link{
+  font-size: 1.2rem !important;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+h1{
+  font-size: 3.5rem !important;
+  font-weight:400;
+  line-height: 1.5 !important;
+}
+
+h2{
+  font-weight: bold !important;
+}
+
+h3{
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+}
+
+p{
+  color: #8f8f8f !important;
+}
+
+.navbar{
+  padding: 2rem 0 4.5rem 0 !important;
+}
+
+.nav-item{
+  padding: 0 18px !important;
+  /* <!-- This rule overrides all previous styling rules ​-- the ! important property increases its priority.
+  ignore all the subsequent rules --> */
+}
+
+
+.download-button {
+  margin: 5% 3% 5% 0%;
+}
+.title-image{
+  width: 60%;
+  margin-left: 3rem;
+  position: absolute;
+  transform: rotate(25deg);
+  z-index: 1;
+}
+
+#features{
+  background-color: white;
+  position: relative;
+  height: 400px;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .title-image{
+    transform: rotate(0deg);
+    position: static;
+    margin-right: 4rem;
+    width: 80%;
+  }
+}
+
+#title {
+  text-align: center !important;
+}
