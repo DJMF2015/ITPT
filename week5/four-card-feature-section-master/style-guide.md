@@ -9,7 +9,7 @@ The designs were created to the following widths:
 
 ## Colors
 <!-- //to compile scss -->
-<!-- sass --watch input.scss output.css -->
+<!--  sass --watch scss:css  -->
 ### Primary
 
 - Red: hsl(0, 78%, 62%)
