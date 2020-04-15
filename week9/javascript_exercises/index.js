@@ -9,7 +9,7 @@ const twoAdd = function(a, b) {
 
 console.log(twoAdd(3, 9));
 
-// console.log(twoAdd(8,9))
+console.log(twoAdd(8,9))
 
 const p1 = {name: 'david', age: 23, location:'edinburgh'}
 const p2 = {name: 'john', age:37,location: 'Glasgow'};
@@ -29,28 +29,57 @@ price[1];
 // Tell them how many characters they have written and how many characters they are remaining out of 280.
 //
 // Output(Alert): You have written 182 characters, you have 98 characters left.
-/////////////////////////
-// let total =200;
-var name = 'Hello. David is tweeting here. Slice some of my words'
-// var name = prompt('please enter a name' );
-// alert(name.length + '\n'+ name);
-// total -= name.length;
-// alert('Your name is ', + '\n' + name + '\n' + name.length + '\n you have' + total + '\n characters remaining ');
-// console.log(total)
-////////////////////////
+
 // Prompt the user to enter a tweet (enter more than 280 characters)
 // Using the SLICE function cut the tweet at 280 characters
 // Alertback back the 280 characters tweet
 ////////////////////////////////////////////
 
-var total = 280;
-function myFunction() {
 
-  var words = prompt('please enter words...')
-  var wordlength =  words.length;
-  var remaining = total - wordlength;
-  console.log('Total left : '+ remaining)
-  return words.slice(0,280);//start, end
+name = 'david fulton'
+
+let capitalLetters = name.charAt(0).toUpperCase() + name.slice(1)
+// console.log(capitalLetters)
+
+var score=Math.round( Math.random()  *   100);
+if (score<40){
+  console.log('You dont love each other')
+} else if (score>70) {
+  console.log('You love each other  💖.')
+}else {
+  console.log('touch and go...')
 }
-// var str = "Hello. David is tweeting here. Slice some of my words.";
-console.log(myFunction())
+console.log(" 💖 Love Score is :"+ score);
+
+// var user = 'david'
+// var passuser = 'daid'
+// // var capitalUser = user.toUpperCase()
+// if (user ===passuser){
+//   console.log('now youve entered into your bank')
+// } else {
+//   console.log(   ' is wrong password. try again')
+// }
+
+// var data1 = prompt('please enter first number')
+// var data2 = prompt('please enter second number')
+// var passcode = 1234;
+
+var result;
+var number = '-';
+var numb1 = 2; var numb2 =33;
+switch(number) {
+  case '+':
+  //////code black
+   result = numb1 + numb2
+  console.log(result)
+  break;
+  case '-':
+  //////code black
+  result = numb2 - numb1;
+  console.log(result)
+  break;
+
+  default:
+  // code block
+  console.log("Error")
+}
