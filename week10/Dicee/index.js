@@ -1,5 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('#button');
+  button.addEventListener('click', handleButtonClick);
+});
 
-(function run(){
+const handleButtonClick = function() {
 
   var randomNumber1 = (Math.floor(Math.random() * 6) + 1);
   var imgPath = "images/dice" + randomNumber1 + ".png"
@@ -20,7 +24,6 @@
   (randomNumber1 === randomNumber2){
     document.getElementsByTagName('h1')[0].innerHTML = "Player 1 & 2 Draw"
   }
+};
 
-})();
-
-// TO DO - Add a button event handler
+ 
