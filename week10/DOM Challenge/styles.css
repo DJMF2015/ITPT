@@ -1,9 +1,13 @@
 h1 {
-  color: red;
+  color: blue;
 }
 
-.main{
-  background-image: linear-gradient(65deg, teal 50%, white 45%);
-  height: 400px;
-  width: 100%;
+.list{
+  background-image: linear-gradient(65deg, teal 80%, white 45%);
+
+}
+
+.top{
+   color: red;
+   font-family: fantasy;
 }

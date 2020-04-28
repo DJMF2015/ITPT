@@ -22,8 +22,6 @@ const handleButtonClick = function() {
     document.getElementsByTagName('h1')[0].innerHTML = "player2 is winner"
   } else if
   (randomNumber1 === randomNumber2){
-    document.getElementsByTagName('h1')[0].innerHTML = "Player 1 & 2 Draw"
+    document.getElementsByTagName('h1')[0].innerHTML = "Draw"
   }
 };
-
- 

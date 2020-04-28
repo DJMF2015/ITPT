@@ -1,5 +1,5 @@
-// // alert(loaded)
-// document.querySelectorAll('.list')[2].textContent = 'David Fulton';
-// document.querySelectorAll('.list')[0].style.background = 'lightgrey';
-//
-// // document.querySelector('.list')[1].innerHTML = 'David ';
+
+document.querySelector('.list')[0].innerHTML = 'David Gash';
+
+// document.querySelector('.top')[0].innerHTML = 'David Gash';
+document.querySelector('.list').classList.add('top');
