@@ -11,7 +11,7 @@ let bottles = 99;
 var text = "";
 
 while(bottles>=1){
-  let drink = bottles -1; //drink a bottle
+  let drink = bottles -1;
   text += bottles + " bottles of beer on the wall," + bottles + "bottles of beer." +
   "<br>" + "Take one down and pass it around, " + drink + "bottles of beer on the wall." + "<br><br>";
   if (bottles === 1){
