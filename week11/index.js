@@ -1,6 +1,5 @@
 let array = ["apple", "mango", "toothpaste", "orange"];
 
-
 function run(){
   var i, len, text;
   for (i = 0, len = array.length, text = ""; i < len; i++) {
