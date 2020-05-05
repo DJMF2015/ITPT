@@ -2,33 +2,63 @@ body {
   font-family: fantasy;
   background-color: #F7F7FF;
 }
+.nav-link{
+color: blue;
+font-weight:200
+}
 
 ul#list {
   list-style-type: none;
   padding-left: 0;
   margin: auto;
   margin-top: 0.5em;
+  margin: 1rem;
+  background: #cbd4a3;
+  box-shadow: 2px 4px 25px rgba(172, 76, 224, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+ul#list:hover {
+  box-shadow: 2px 8px 45px rgb(110, 202, 86);
+  transform: translate3D(0, -2px, 0);
 }
 
 li {
-  width: fit-content;
+  /* width: fit-content; */
   padding: 0.25em;
-  margin: 0.175em;
+  /* margin: 0.175em; */
   border-radius: 2px;
-  background-color: #070600;
-
+  text-align: center;
+  /* background-color: #070600; */
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
   color: #48ACF0;
   border: 1px solid white;
   margin: auto;
 }
 
+li
+img {
+  flex-wrap: wrap;
+  padding: 30 20% 20 20%;
+  height: 60px;
+  width: 40px;
+}
 span.name {
-  color: #CCDDE2;
+  color: green;
 }
 
 span.name::before {
   content: ' - ';
   color: #48ACF0;
+}
+
+span.image::before{
+  content: ': ';
+
 }
 
 span.quantity::before {
@@ -40,7 +70,7 @@ div.center-contents {
 }
 
 form {
-  background-color: #EA526F;
+  background-color: #E8DFE0;
   width: fit-content;
   padding: 0.5em;
   text-align: center;
@@ -50,8 +80,4 @@ form {
 div.form-element {
   padding: 0.25em;
   margin: 0.25em;
-}
-
-label::after, legend::after {
-  content: ':';
 }

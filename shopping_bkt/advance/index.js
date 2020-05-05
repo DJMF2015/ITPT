@@ -1,16 +1,13 @@
 
 var itemsData = [
-  {name: 'Apples', quantity: 3.00},
-  {name: 'Pears', quantity: 4.00},
-  {name: 'Banana', quantity: 0.50},
-  {name: 'Tunafish', quantity: 1.00},
-  {name : 'mango', quantity: 2.00},
-  {name: 'cutlery', quantity: 3.00}
+  {name: 'Apples', quantity: 3.0, image: 'apple.png'},
+  {name: 'Pears', quantity: 4.0, image: 'pears.jpg'},
+  {name: 'Banana', quantity: 3.0, image: 'banana.jpg'},
+  {name: 'Tuna', quantity: 1.0, image: 'tuna.jpg'}
 ];
 
 //setup event handlers
 document.addEventListener('DOMContentLoaded', () => {
-  // const newItem = document.querySelector('#newItem');
   const clearAllBtn = document.querySelector('#clearBtn')
   const removeBtn = document.querySelector('#removeBtn')
 
@@ -52,7 +49,8 @@ const renderListItemFromInput = function(form) {
 
 const formValues = (form) => ({
   name: form.name.value,
-  quantity: form.quantity.value
+  quantity: form.quantity.value,
+  image: form.image
 });
 
 
@@ -66,8 +64,9 @@ const createListItem = function(item) {
 
   const basketSpanName = document.createElement('span');
   basketSpanName.classList.add('name');
-  basketSpanName.textContent = item.name+ ': ';
+  basketSpanName.textContent = item.name+ ': '
   li.appendChild(basketSpanName);
+
 
   const span2 = document.createElement('span');
   span2.classList.add('label')
@@ -76,8 +75,15 @@ const createListItem = function(item) {
 
   const basketSpanPrice = document.createElement('span');
   basketSpanPrice.classList.add('price');
-  basketSpanPrice.textContent = item.quantity;
+  basketSpanPrice.textContent = item.quantity ;
   li.appendChild(basketSpanPrice);
+
+  const imageSpan = document.createElement('span')
+  imageSpan.classList.add('image')
+  const image = document.createElement('img');
+  image.src = `${item.image}`;
+  li.appendChild(image);
+  li.appendChild(imageSpan)
 
   return li;
 };
