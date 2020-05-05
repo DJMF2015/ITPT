@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="jumbotron">
+    <div class="text-center">
+      <h1 class="display-4">Simple Shopping basket</h1>
+      <form>
+        <div class="form-element">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="" value="">
+        </div>
+
+        <div class="form-element">
+          <label for="quantity">Price</label>
+          <input type="number" id="quantity" min="0" max="10" value="">
+        </div>
+        <br>  
+        <button type="button"  class="btn btn-danger" id='removeBtn' class="btn btn-danger">Remove item</button>
+        <!-- <button type="button" class="btn btn-success" onclick="formSubmitHandler()" name="button"> Clear Basket</button> -->
+        <button type="button" class="btn btn-danger" id="clearBtn">Clear All</button>
+
+        <br> <br>
+        <div class="form-element">
+          <button type="submit" value="Add to Basket" name="button" class="btn btn-primary"> Add Item</button>
+        </div>
+        <br> <br>
+      </form>
+
+      <ul id="list">
+      </ul>
+
+      <h4>Background Mode</h4>
+      <input type ="radio" name="color" value="grey">Dark</input>
+      <input type ="radio" name="color" value="ghostwhite">Light</input>
+      <!-- <div id="parentDivElement" style="border: 1px solid red; padding: 10px;">
+
+      My name is <b>parentDivElement</b>.  I cannot be removed.
+
+      <div id="childOne" style="border: 1px solid green; padding: 10px; margin: 10px;">
+
+      My name is <b>childOne</b>.
+
+    </div>
+
+    <div id="childTwo" style="border: 1px solid blue; padding: 10px; margin: 10px;">
+
+    My name is <b>childTwo</b>.
+
+  </div>
+
+  <div id="childThree" style="border: 1px solid purple; padding: 10px; margin: 10px;">
+
+  My name is <b>childThree</b>.
+
+</div>
+
+</div>
+<br> <br>
+
+<p>&nbsp;</p>
+
+<input id="cb1" type="checkbox" value="childOne" onClick="removeElement('parentDivElement', this.value);"><label for="cb1">Remove <b>childOne</b></label>
+
+<input id="cb2" type="checkbox" value="childTwo" onClick="removeElement('parentDivElement', this.value);"><label for="cb2">Remove <b>childTwo</b></label>
+
+<input id="cb3" type="checkbox" value="childThree" onClick="removeElement('parentDivElement', this.value);"><label for="cb3">Remove <b>childThree</b></label
+<div class="mx-auto" style="width: 400px;">
+
+
+<h3 id="view" class="text-center" >
+<ol id="demo">
+
+
+</ol>
+</h3>
+</div>
+</div>
+</div> -->
+
+<script src="index.js" charset="utf-8"></script>
+</body>
+</html>
