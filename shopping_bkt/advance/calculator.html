@@ -8,62 +8,98 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="calculator.css"/>
 </head>
 <body>
-  <div class="container">
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <a class="title" href="index.html">Online Shopping</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link " style="color:blue;" href="calculator.html">Calculator</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:blue;" href="index.html">Shopping basket </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:blue;"></a>
-              <input type ="radio" name="color" value="ghostwhite" >Light</input>
-              <input type ="radio" name="color" value="black" >Dark</input>
-            </li>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav-dimgray sticky-top">
+      <h5 class="title" href="#">Online Shopping</h5>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto nav-fill w-100">
+          <li class="nav-item active">
+            <a class="nav-link " style="color:white;" href="index.html">Shopping basket </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color:white;" href="calculator.html">Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color:white;"></a>
+            <input type ="radio" class="btn btn-info" name="color" value="ghostwhite">Light</input>
+            <input type="radio" class="btn btn-info"  name="color" value="#b0b0bb" >Dark</input>
+          </li>
 
-          </ul>
-        </div>
-      </nav>
-    </div>
+        </ul>
+      </div>
+    </nav>
+    <!-- <div class="jumbotron">
+  </div> -->
+</div>
 
-    <form>
-      <table>
-        <table border="1" >
-          <tr>
-            <td>
-              <input type="text" name="numb1" onBlur="var a=document.forms.myform.numb1.value; if(isNaN(a)) alert(a+' is not a number');">
-            </td>
+<!-- <form>
+<table>
+<table border="1" >
+<tr>
+<td>
+<input type="text" name="numb1" ">
+</td> -->
+<form>
+<div class="form-element">
+  <label for="numb1"></label>
+  <input type="text" id="numb1" name="numb1"  value="" required>
+</div>
+
+<div class="form-element">
+  <label for= "numb2"></label>
+  <input type="text" id="numb2" name="numb2"  value="" required>
+</div>
+
+<input type="radio" name="op" value="plus"  >  &plus; <br>
+<input type="radio" name="op" value="minus" > &minus;<br>
+<input type="radio" name="op" value="times"> &times;<br>
+<input type="radio" name="op" value="by"> &divide;<br>
+
+<input type="hidden" name="submitted" value="TRUE">
+<button class="btn btn-success" type="submit">Calculate</button>
+</form>
+
+<!-- <input type="text" name="numb2" onBlur="var a=document.forms.myform.numb2.value; if(isNaN(a)) alert(a+' is not a number');"> -->
 
 
-            <td>
-              <input type="radio" name="op" value="plus"> +<br>
-              <input type="radio" name="op" value="minus"> -<br>
-              <input type="radio" name="op" value="times"> x<br>
-              <input type="radio" name="op" value="by"> /<br>
-            </td>
 
-            <td>
-              <input type="text" name="numb2" onBlur="var a=document.forms.myform.numb2.value; if(isNaN(a)) alert(a+' is not a number');">
-            </td>
-          </tr>
-        </table>
-        <input type="hidden" name="submitted" value="TRUE">
-        <button type="submit">Submit</button>
-      </table>
-    </form>
-    
+<div class="calculator">
+
+  <!-- the input -->
+  <input type="number" min="0">
+
+  <!-- the buttons -->
+  <div class="calculator-buttons">
+    <button class="calc-button is-clear">C</button>
+    <!-- <button class="calc-button">&divide;</button> -->
+    <button type="radio" name="op" value="by" class="calc-button">&divide; </button>
+    <button class="calc-button">7</button>
+    <button class="calc-button">8</button>
+    <button class="calc-button">9</button>
+    <!-- <button class="calc-button">&times;</button> -->
+    <button type="checked" name="op" value="times" class="calc-button"> &times; </button>
+    <button class="calc-button">4</button>
+    <button class="calc-button">5</button>
+    <button class="calc-button">6</button>
+    <!-- <button class="calc-button">&minus;</button> -->
+    <button type="radio" name="op" value="minus" class="calc-button"> &minus;  </button>
+    <button class="calc-button">1</button>
+    <button class="calc-button">2</button>
+    <button class="calc-button">3</button>
+    <!-- <button class="calc-button">&plus;</button> -->
+    <button type="radio" name="op" value="plus" class="calc-button"> &plus; </button>
+    <button class="calc-button is-zero">0</button>
+    <button class="calc-button is-equals">&equals;</button>
   </div>
 
-  <script src="calc.js" charset="utf-8"></script>
+</div>
+<script src="colourMode.js" charset="utf-8"></script>
+<script src="calc.js" charset="utf-8"></script>
 </body>
 </html>

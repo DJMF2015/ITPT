@@ -1,20 +1,9 @@
-body {
-  font-family: fantasy;
-  background-color: #F7F7FF;
-}
-.nav-link{
-color: blue;
-font-weight:200
-}
 
 ul#list {
-  list-style-type: none;
-  padding-left: 0;
-  margin: auto;
-  margin-top: 0.5em;
+  text-align: center;
   margin: 1rem;
-  background: #cbd4a3;
-  box-shadow: 2px 4px 25px rgba(172, 76, 224, 0.1);
+  /* background: #cbd4a3; */
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
   border-radius: 12px;
   overflow: hidden;
   transition: all .2s cubic-bezier(0.4, 0, 1, 1);
@@ -26,58 +15,58 @@ ul#list:hover {
 }
 
 li {
-  /* width: fit-content; */
-  padding: 0.25em;
-  /* margin: 0.175em; */
-  border-radius: 2px;
-  text-align: center;
-  /* background-color: #070600; */
-  display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  color: #48ACF0;
-  border: 1px solid white;
-  margin: auto;
+  padding: 0.0em;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #060606;
+  margin: 15px 80px 10px 15px;
 }
 
-li
 img {
   flex-wrap: wrap;
-  padding: 30 20% 20 20%;
-  height: 60px;
-  width: 40px;
-}
-span.name {
-  color: green;
-}
-
-span.name::before {
-  content: ' - ';
-  color: #48ACF0;
-}
-
-span.image::before{
-  content: ': ';
-
-}
-
-span.quantity::before {
-  content: ' - ';
-}
-
-div.center-contents {
-  text-align: center;
+  height: 70px;
+  width:55px;
 }
 
 form {
-  background-color: #E8DFE0;
+  /* background-color: #E8DFE0; */
   width: fit-content;
   padding: 0.5em;
   text-align: center;
-  margin: auto;
 }
 
 div.form-element {
   padding: 0.25em;
   margin: 0.25em;
+}
+
+.bg-nav-dimgray {
+  background-color: #2a7b51 !important;
+}
+
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
+}
+
+.card:nth-child(2n) h1 {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.card:nth-child(4n) h1 {
+  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.card:nth-child(5n) h1 {
+  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
