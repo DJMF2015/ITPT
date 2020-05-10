@@ -10,9 +10,8 @@ var itemsData = [
 document.addEventListener('DOMContentLoaded', () => {
   const clearAllBtn = document.querySelector('#clearBtn')
   const removeBtn = document.querySelector('#removeBtn')
-
-
   const newItem = document.querySelector('form');
+
   newItem.addEventListener('submit', newSubmitHandler); //1
   clearAllBtn.addEventListener('click', handleClearAll);
   if (removeBtn.addEventListener('click', removeItem)){
@@ -61,18 +60,18 @@ const createListItem = function(item) {
 
   const span2 = document.createElement('span');
   span2.classList.add('label')
-  span2.textContent =  'Qty: ';
+  span2.textContent =  'Qty:  ';
   li.appendChild(span2);
 
   const basketSpanPrice = document.createElement('span');
   basketSpanPrice.classList.add('price');
-  basketSpanPrice.textContent = item.quantity ;
+  basketSpanPrice.textContent = item.quantity + ' ';
   li.appendChild(basketSpanPrice);
 
   const imageSpan = document.createElement('span')
   imageSpan.classList.add('image')
   const image = document.createElement('img');
-  image.src = `${item.image}`;
+  image.src = ` ${item.image} `;
   li.appendChild(image);
   li.appendChild(imageSpan)
 

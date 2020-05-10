@@ -7,6 +7,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="calculator.css"/>
 </head>
@@ -34,72 +35,80 @@
         </ul>
       </div>
     </nav>
-    <!-- <div class="jumbotron">
-  </div> -->
-</div>
 
-<!-- <form>
-<table>
-<table border="1" >
-<tr>
-<td>
-<input type="text" name="numb1" ">
-</td> -->
-<form>
-<div class="form-element">
-  <label for="numb1"></label>
-  <input type="text" id="numb1" name="numb1"  value="" required>
-</div>
-
-<div class="form-element">
-  <label for= "numb2"></label>
-  <input type="text" id="numb2" name="numb2"  value="" required>
-</div>
-
-<input type="radio" name="op" value="plus"  >  &plus; <br>
-<input type="radio" name="op" value="minus" > &minus;<br>
-<input type="radio" name="op" value="times"> &times;<br>
-<input type="radio" name="op" value="by"> &divide;<br>
-
-<input type="hidden" name="submitted" value="TRUE">
-<button class="btn btn-success" type="submit">Calculate</button>
-</form>
-
-<!-- <input type="text" name="numb2" onBlur="var a=document.forms.myform.numb2.value; if(isNaN(a)) alert(a+' is not a number');"> -->
-
-
-
-<div class="calculator">
-
-  <!-- the input -->
-  <input type="number" min="0">
-
-  <!-- the buttons -->
-  <div class="calculator-buttons">
-    <button class="calc-button is-clear">C</button>
-    <!-- <button class="calc-button">&divide;</button> -->
-    <button type="radio" name="op" value="by" class="calc-button">&divide; </button>
-    <button class="calc-button">7</button>
-    <button class="calc-button">8</button>
-    <button class="calc-button">9</button>
-    <!-- <button class="calc-button">&times;</button> -->
-    <button type="checked" name="op" value="times" class="calc-button"> &times; </button>
-    <button class="calc-button">4</button>
-    <button class="calc-button">5</button>
-    <button class="calc-button">6</button>
-    <!-- <button class="calc-button">&minus;</button> -->
-    <button type="radio" name="op" value="minus" class="calc-button"> &minus;  </button>
-    <button class="calc-button">1</button>
-    <button class="calc-button">2</button>
-    <button class="calc-button">3</button>
-    <!-- <button class="calc-button">&plus;</button> -->
-    <button type="radio" name="op" value="plus" class="calc-button"> &plus; </button>
-    <button class="calc-button is-zero">0</button>
-    <button class="calc-button is-equals">&equals;</button>
   </div>
 
+  <!-- <form>
+  <table>
+  <table border="1" >
+  <tr>
+  <td>
+  <input type="text" name="numb1" ">
+</td> -->
+<!-- <form action="calculator.html" method="post">
+<div class="form-element">
+<label for="numb1"></label>
+<input type="text" id="numb1" name="numb1"  value="" required>
 </div>
+<p id ="nan"> </p>
+<div class="form-element">
+<label for= "numb2"></label>
+<input type="text" id="numb2" name="numb2"  value="" required>
+</div>
+<br>
+<p id ="nan"> </p>
+<input type="radio"  name="op" value="plus"  >  &plus; <br>
+<input type="radio"  name="op" value="minus" > &minus;<br>
+<input type="radio"  name="op" value="times"> &times;<br>
+<input type="radio"  name="op" value="by"> &divide;<br>
+
+<input type="hidden" name="submitted" value="TRUE">
+<div class="form-element">
+<button type="submit" value="calculate" name="button" class="btn btn-danger"> Calculate</button>
+</div>
+</form>
+
 <script src="colourMode.js" charset="utf-8"></script>
 <script src="calc.js" charset="utf-8"></script>
 </body>
+</html> -->
+
+<br>
+<center><h5> Basic Calculator Using Radio Button </h5></cenmter>
+  <br>
+  <form action="calculator.html" method="POST">
+    <label for="first_value">
+      First Value
+
+    </label>
+    <input type="text" name="no_one" id="no1" size="5" autofocus>
+    <br><br>
+    <label for="second_value">
+      Second Value
+    </label>
+    <input type="text" name="no_2" id="no2" size="5">
+    <br><br>
+    <label>Operators</label><br>
+    <br> <label for="radio1">
+      &nbsp; &nbsp; &nbsp;
+      <input type="radio" name="math" onclick="reset_msg();" />Addition
+      &nbsp; &nbsp; &nbsp;
+    </label>
+    <input type="radio" name="math" onclick="reset_msg();" />Subtraction
+    &nbsp; &nbsp; &nbsp;
+    <input type="radio" name="math" onclick="reset_msg();" />Multiplication
+    &nbsp; &nbsp; &nbsp;
+    <input type="radio" name="math" onclick="reset_msg();" />Division
+    &nbsp; &nbsp; &nbsp;
+    <br><br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <input type="submit" value="Compute" onclick="return solve();" />
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <input type="submit" value="Clear" onclick="return clear();" />
+    <br><br>
+    <div id="msg"></div>
+  </form>
+</body>
+<script src="colourMode.js" charset="utf-8"></script>
+<script src="calc.js" charset="utf-8"></script>
 </html>
