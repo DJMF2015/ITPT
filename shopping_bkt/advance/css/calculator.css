@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+}
+/* add some spacing */
+body          {
+  background: #F6F6F6;
+}
+
+.bg-nav-dimgray {
+  background-color: #2a7b51 !important;
+}
+
+.calcBtns{
+  border: 2px 1px 2px 1px;
+  border-top-color: black;
+  border-left-color: black;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 15px;
+  border-style: ridge;
+}
+
+.message {
+  color: blue;
+  font-family:arial;
+  font-size:18px;
+  font-weight:bolder;
+  padding-left: 38px;
+}
+.warning {
+  color: red;
+  font-family:arial;
+  font-size:18px;
+
+}
+
+section .fade-in{
+  background-color: white;
+  position: relative;
+  animation-name: item;
+  animation-duration: 1.5s;
+  animation-delay: 0.25s;
+}
+
+@keyframes item {
+  100% {background-color:white; left:0px; top: 0px;}
+  75%  {background-color:white; left:0px; top:0px;}
+  0%   {background-color:white; left:0px; top:200px;}
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
+}

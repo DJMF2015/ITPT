@@ -1,4 +1,9 @@
 
+
+.bg-nav-dimgray {
+  background-color: #2a7b51 !important;
+}
+
 ul#list {
   text-align: center;
   margin: 1rem;
@@ -42,10 +47,19 @@ div.form-element {
   margin: 0.25em;
 }
 
-.bg-nav-dimgray {
-  background-color: #2a7b51 !important;
+.fade-in{
+  background-color: white;
+  position: relative;
+  animation-name: item;
+  animation-duration: 1.5s;
+  animation-delay: 0.25s;
 }
 
+@keyframes item {
+  100% {background-color:white; left:0px; top: 0px;}
+  75%  {background-color:white; left:0px; top:0px;}
+  0%   {background-color:white; left:0px; top:200px;}
+}
 
 @media screen and (min-width: 600px) {
   .card {

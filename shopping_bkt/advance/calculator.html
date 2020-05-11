@@ -8,14 +8,14 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="calculator.css"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="stylesheet" href="./css/calculator.css"/>
 </head>
 <body>
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-nav-dimgray sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav-dimgray sticky-top ">
       <h5 class="title" href="#">Online Shopping</h5>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,77 +38,43 @@
 
   </div>
 
-  <!-- <form>
-  <table>
-  <table border="1" >
-  <tr>
-  <td>
-  <input type="text" name="numb1" ">
-</td> -->
-<!-- <form action="calculator.html" method="post">
-<div class="form-element">
-<label for="numb1"></label>
-<input type="text" id="numb1" name="numb1"  value="" required>
-</div>
-<p id ="nan"> </p>
-<div class="form-element">
-<label for= "numb2"></label>
-<input type="text" id="numb2" name="numb2"  value="" required>
-</div>
-<br>
-<p id ="nan"> </p>
-<input type="radio"  name="op" value="plus"  >  &plus; <br>
-<input type="radio"  name="op" value="minus" > &minus;<br>
-<input type="radio"  name="op" value="times"> &times;<br>
-<input type="radio"  name="op" value="by"> &divide;<br>
-
-<input type="hidden" name="submitted" value="TRUE">
-<div class="form-element">
-<button type="submit" value="calculate" name="button" class="btn btn-danger"> Calculate</button>
-</div>
-</form>
-
-<script src="colourMode.js" charset="utf-8"></script>
-<script src="calc.js" charset="utf-8"></script>
-</body>
-</html> -->
-
-<br>
-<center><h5> Basic Calculator Using Radio Button </h5></cenmter>
   <br>
-  <form action="calculator.html" method="POST">
-    <label for="first_value">
-      First Value
-
-    </label>
-    <input type="text" name="no_one" id="no1" size="5" autofocus>
-    <br><br>
-    <label for="second_value">
-      Second Value
-    </label>
-    <input type="text" name="no_2" id="no2" size="5">
-    <br><br>
-    <label>Operators</label><br>
-    <br> <label for="radio1">
+  <center><h5> Simple Calculator </h5></center>
+  <br>
+  <section class="fade-in">
+    <form>
+      <label for="first_value">
+        Value One
+      </label>
+      <input type="text" name="no_one" id="no1" size="5" autofocus>
+      <br><br>
+      <label for="second_value">
+        Value Two
+      </label>
+      <input type="text" name="no_2" id="no2" size="5">
+      <br><br>
+      <label>Operators</label><br>
+      <br> <label for="radio1">
+        &nbsp; &nbsp; &nbsp;
+        <input type="radio" name="math" onclick="reset_message();"/>Addition
+        &nbsp; &nbsp; &nbsp;
+      </label>
+      <input type="radio" name="math" onclick="reset_message();" />Subtraction
       &nbsp; &nbsp; &nbsp;
-      <input type="radio" name="math" onclick="reset_msg();" />Addition
+      <input type="radio" name="math" onclick="reset_message();" />Multiplication
       &nbsp; &nbsp; &nbsp;
-    </label>
-    <input type="radio" name="math" onclick="reset_msg();" />Subtraction
-    &nbsp; &nbsp; &nbsp;
-    <input type="radio" name="math" onclick="reset_msg();" />Multiplication
-    &nbsp; &nbsp; &nbsp;
-    <input type="radio" name="math" onclick="reset_msg();" />Division
-    &nbsp; &nbsp; &nbsp;
-    <br><br>
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    <input type="submit" value="Compute" onclick="return solve();" />
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <input type="submit" value="Clear" onclick="return clear();" />
-    <br><br>
-    <div id="msg"></div>
-  </form>
+      <input type="radio" name="math" onclick="reset_message();" />Division
+      &nbsp; &nbsp; &nbsp;
+      <br><br>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="submit" class="alert alert-info calcBtns " value="Compute" onclick="return calculate();" />
+      &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="submit" class="alert alert-info calcBtns"   value="Clear" onclick="return clear();" />
+      <br><br>
+      <div id="msg"></div>
+    </form>
+  </section>
 </body>
-<script src="colourMode.js" charset="utf-8"></script>
-<script src="calc.js" charset="utf-8"></script>
+<script src="js/colourMode.js" charset="utf-8"></script>
+<script src="js/calculator.js" charset="utf-8"></script>
 </html>

@@ -1,9 +1,9 @@
 
 var itemsData = [
-  {name: 'Apples', quantity: 3.0, image: 'apple.png'},
-  {name: 'Pears', quantity: 4.0, image: 'pear.png'},
-  {name: 'Banana', quantity: 3.0, image: 'banana.png'},
-  {name: 'Tuna', quantity: 1.0, image: 'tuna.png'}
+  {name: 'Apples', quantity: 3.0, image: './images/apple.png'},
+  {name: 'Pears', quantity: 4.0, image: './images/pear.png'},
+  {name: 'Banana', quantity: 3.0, image: './images/banana.png'},
+  {name: 'Tuna', quantity: 1.0, image: './images/tuna.png'}
 ];
 
 //setup event handlers
@@ -76,7 +76,6 @@ const createListItem = function(item) {
   li.appendChild(imageSpan)
 
 
-
   return li;
 };
 
@@ -88,9 +87,12 @@ const addListItem = function(listItem){
 
 
 const removeItem = function(){
-  var elem = document.querySelector('#list');
+
+  const elem = document.querySelector('ul#list');
   if (elem.parentNode.hasChildNodes()) {
+
     elem.removeChild(elem.childNodes[0]);
+   itemsData.pop();
   }
 }
 

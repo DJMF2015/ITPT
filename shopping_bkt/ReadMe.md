@@ -8,7 +8,7 @@ Create a front-end JavaScript application that allows users to input shopping it
 
 ### UI
 - [x] Should contain a navbar with appropriate nav links
-- [x] User should be able to navigate to back and forth between pages
+- [x] User should be able to navigate between pages
 - [x] should make use of bootstrap 4
 
 ### Shopping list
@@ -18,12 +18,15 @@ Create a front-end JavaScript application that allows users to input shopping it
 - [x] user should be able to remove an item
 - [x] User should be able to remove all items (clear)
 
-### calculator
+### basic calculator
 
- - [] UI should display a calculator with nine buttons (not including operators)
- - [] UI should be coded using html css (or bootstrap4)
- - [] Should allow a user to selector buttons on calc to display on screen
- - [] Should allow user to selector appropriate operator before submitting calculation (i.e., 'equals')
- - [] Should display the correct calculation on screen
- - [] Should display a message to user if NaN is input
- - [] Should allow user to clear screen
+ - [x] UI should be coded using html css (or bootstrap4)
+ - [x] Should allow user to selector appropriate operator before submitting calculation (i.e., 'equals')
+ - [x] Should display the correct calculation on screen
+ - [x] Should allow user to clear screen
+
+#additional improvements
+- [] UI should display a calculator with nine buttons (including operators)
+- [] calculator should allow multiple operations to be appended to previous calculations
+- [] should not allow more than two '.' decimal placings per number;
+- [] add additional styling to calculator
