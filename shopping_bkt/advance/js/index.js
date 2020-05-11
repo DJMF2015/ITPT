@@ -71,6 +71,7 @@ const createListItem = function(item) {
   const imageSpan = document.createElement('span')
   imageSpan.classList.add('image')
   const image = document.createElement('img');
+
   image.src = ` ${item.image} `;
   li.appendChild(image);
   li.appendChild(imageSpan)
@@ -81,6 +82,7 @@ const createListItem = function(item) {
 
 const addListItem = function(listItem){
   const listContainer = document.querySelector('#list');
+
   listContainer.appendChild(listItem);
   itemsData.push(listItem)
 }

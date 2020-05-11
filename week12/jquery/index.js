@@ -21,11 +21,22 @@ $(document).ready(function(){
   });
 });
 
+// $(document).ready(function(){
+//   $(".btn1").click(function(){
+//     $("nav").fadeOut();
+//   });
+//   $(".btn2").click(function(){
+//     $("nav").fadeIn();
+//   });
+// });
+
+
+
 $(document).ready(function(){
   $(".btn1").click(function(){
-    $("nav").fadeOut();
+    $(".jumbotron").animate({left: '700px'});
   });
   $(".btn2").click(function(){
-    $("nav").fadeIn();
+    $("nav").slideDown();
   });
 });
