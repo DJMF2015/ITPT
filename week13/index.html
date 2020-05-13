@@ -11,15 +11,22 @@
 </head>
 <body>
   <div class="jumbotron">
-    <h1 class="display-1 text-center">Welcome </h1>
+    <h1 class="display-1 text-center">Basic BMI Calculator </h1>
   </div>
   <center>
     <form action="/" class="" method="post">
-      <label for="input1">Input 1</label>
-      <input type="text" name="input1" value=""><br>
-      <label for="input2">Input 2</label>
-      <input type="text" name="input2" value=""><br><br>
-      <button type="submit" name="button" class="btn btn-primary btn-lg">Add</button>
+      <label for="weight">Please Enter weight in kgs</label>
+      <input type="text" name="weight" value="" placeholder="enter weight" required><br>
+      <label for="height">Please enter height in (m)</label>
+      <input type="text" name="height" value=""  placeholder="enter height" required><br><br>
+      <!-- <label for="input1"> Select from options; </label> -->
+      <!-- <select class="" name="op" value="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select> -->
+      <button type="submit" name="button" class="btn btn-primary btn-lg">Calculate BMI</button>
     </form>
   </center>
 </body>
