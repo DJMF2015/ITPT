@@ -45,9 +45,17 @@
   </nav>
   <div class="jumbotron">
     <div class="text-center" >
-      <form class="form-group" action="/" method="post">
-        <label>Please add your Name : </label>
-        <input type="text" name="personname" value="">
+      <form class="form-group" action="/weather" method="post">
+        <label>Select CityName : </label>
+        <input type="text" name="wname" value="">
+        <br>
+        <label>Select Country : </label>
+        <select class="" name="country">
+          <option value="GB">Britian</option>
+          <option value="AE">United Arab Emirates</option>
+          <option value="US">United States</option>
+          <option value="BE">Belgium</option>
+        </select>
         <br>
         <button type="submit" class="btn btn-primary" name="button">Add</button>
 
