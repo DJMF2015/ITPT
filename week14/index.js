@@ -1,25 +1,40 @@
-const express = require('express')
+const express = require('express');
 const app = express();
 const port = 3000;
-const parser = require('body-parser');
+var parser = require('body-parser');
 const heroes = require('superheroes');
 const villains =  require('supervillains');
+const dogNames = require('dog-names');
 
-app.use(parser.urlencoded({extended:true}));
-app.use(express.static(__dirname+ '/'));
 
-//http:localhost:3000
-app.get('/', function(req,res){
-  res.sendFile(__dirname + '/source/index.html');
+app.use(parser.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/'));
+
+// http://localhost:3000 /
+app.get('/', function(req, res){
+  res.sendFile(__dirname + "/source/index.html");
 });
 
 app.get('/heroes', function(req, res){
   res.send("<h1>" + heroes.random());
 });
+app.get('/dognames', function(req, res){
+  res.sendFile(__dirname + "/source/dogname.html")
+})
 
-// app.get('/dognames', function(req, res){
-//   res.send("<h1>" + heroes.random());
-// });
+app.post('/names', function(req, res){
+  var option = req.body.options;
+
+  if(option == "male"){
+      res.send("<h1> The male dog name is : "+ dogNames.maleRandom());
+  }
+  else{
+    res.send("<h1> The female dog name is :"+ dogNames.femaleRandom());
+  }
+
+
+
+})
 
 app.get('/villains', function(req, res){
   res.send("<h1>" + villains.random());
