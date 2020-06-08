@@ -6,11 +6,11 @@
 
 * open terminal:
  - npm install
-
+ - npm run build
+ 
 ### To Run:
 
 * open terminal:
 
-- npm run build
 - open a second tab in terminal, enter:
   npm run start
