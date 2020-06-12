@@ -1,8 +1,12 @@
 <%- include('../partials/header'); %>
- <h1>Home</h1> 
- <hr>
-
- <!-- use for loop here challenge 12 -->
+<h1>Home</h1>
+<hr>
 <p><%= homeStartingContent %></p>
+
+<%  posts.forEach(function(post){ %>
+
+<h3><%=post.title%></h3> <hr>
+<p> <%=post.message%></p>
+<% }) %>
+
 <%- include('../partials/footer'); %>
- 
