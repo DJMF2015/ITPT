@@ -20,7 +20,7 @@ let posts = [];
 
 // http://localhost:8080 /
 app.get('/', function (req, res) {
-  // console.log('home', posts);
+  console.log( posts);
   res.render('pages/home', { homeStartingContent: homeStartingContent, posts: posts });
 });
 
@@ -44,6 +44,12 @@ app.post('/compose', function (req, res) {
   }
   posts.push(post);
   res.redirect('/');
+});
+
+app.get('/post/:anything', function(req, res){
+  console.log(req.params)
+  res.send(req.params);
+
 });
 
 
