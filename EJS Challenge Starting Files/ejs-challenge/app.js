@@ -16,11 +16,12 @@ const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pelle
 const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
 // array for storing of all posts by user
-let posts = []; 
+let posts = [];
 
 // http://localhost:8080 /
 app.get('/', function (req, res) {
-  console.log( posts);
+
+  console.log(posts);
   res.render('pages/home', { homeStartingContent: homeStartingContent, posts: posts });
 });
 
@@ -33,10 +34,10 @@ app.get("/contact", function (req, res) {
 });
 
 app.get('/compose', function (req, res) {
-  // console.log(posts);
+
   res.render("pages/compose");
 });
- 
+
 app.post('/compose', function (req, res) {
   const post = {
     title: req.body.postTitle,
@@ -46,18 +47,26 @@ app.post('/compose', function (req, res) {
   res.redirect('/');
 });
 
-app.get('/post/:anything', function(req, res){
-  console.log(req.params)
-  res.send(req.params);
+app.get('/post/:anything', function (req, res) {
+  const requestedPost = _.lowerCase(req.params.anything); //'Another-test'
+  posts.forEach(function (post) {
+    const storedTitle = _.lowerCase(post.title);
+
+    if (storedTitle === requestedPost) {
+      res.render("pages/post", {
+        title: post.title,
+        message: post.message
+      });
+    }
+  });
 
 });
 
-
+// Challenge 21 - final:
+// when you load up the home page it should have a link at the end of each truncated blog post with something that says Read more.And when we click on it then it should take us to the actual page of the blog post including all of the content.So that means we can read each and every blog post on its own individual page just by clicking on the read more after the bit of truncated preview text.
 
 app.listen(port, function () {
   console.log("Server started on port 8080");
 });
-
-
 
 
