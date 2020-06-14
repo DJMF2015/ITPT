@@ -15,6 +15,17 @@ const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui 
 const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
 const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
+
+//Date Format for blog post
+const postDate = new Date();
+const date1 = postDate.getDate()
+const date2 = postDate.getMonth()
+const date3 = postDate.getFullYear();
+const date4 = postDate.getHours();
+const date5 = postDate.getMinutes();
+var currentDate = date1 + '/' + date2 + '/' + date3;
+ 
+
 // array for storing of all posts by user
 let posts = [];
 
@@ -22,7 +33,7 @@ let posts = [];
 app.get('/', function (req, res) {
 
   console.log(posts);
-  res.render('pages/home', { homeStartingContent: homeStartingContent, posts: posts });
+  res.render('pages/home', { homeStartingContent: homeStartingContent, currentDate: currentDate,  posts: posts  });
 });
 
 app.get("/about", function (req, res) {
@@ -41,14 +52,17 @@ app.get('/compose', function (req, res) {
 app.post('/compose', function (req, res) {
   const post = {
     title: req.body.postTitle,
-    message: req.body.postBody
+    message: req.body.postBody,
+    currentDate: req.body.currentDate
   }
   posts.push(post);
   res.redirect('/');
 });
 
-app.get('/post/:anything', function (req, res) {
-  const requestedPost = _.lowerCase(req.params.anything); //'Another-test'
+app.get('/post/:anotherpost', function (req, res) {
+
+  //lodash library
+  const requestedPost = _.lowerCase(req.params.anotherpost); //'Another-post'
   posts.forEach(function (post) {
     const storedTitle = _.lowerCase(post.title);
 
@@ -62,8 +76,6 @@ app.get('/post/:anything', function (req, res) {
 
 });
 
-// Challenge 21 - final:
-// when you load up the home page it should have a link at the end of each truncated blog post with something that says Read more.And when we click on it then it should take us to the actual page of the blog post including all of the content.So that means we can read each and every blog post on its own individual page just by clicking on the read more after the bit of truncated preview text.
 
 app.listen(port, function () {
   console.log("Server started on port 8080");

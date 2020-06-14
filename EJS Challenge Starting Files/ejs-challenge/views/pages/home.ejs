@@ -2,11 +2,17 @@
 <h1>Home</h1>
 <hr>
 <p><%= homeStartingContent %></p>
+<ul id="myList">
 
 <%  posts.forEach(function(post){ %>
 
-<h3><%=post.title%></h3> <hr>
-<p> <%=post.message.slice(0,100) + '...'%></p>
-<% }) %>
+<li><h3><%=post.title%></h3> <hr>
+<p>
+<%=post.message.slice(0,100) + '......'%></p></li><p><%= currentDate %></p>
+<a href="/post/<%=post.title%>">Read More</a>
+</p>
 
+<% }) %>
+</ul>
 <%- include('../partials/footer'); %>
+
