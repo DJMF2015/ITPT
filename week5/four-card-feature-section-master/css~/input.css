@@ -48,15 +48,14 @@ p {
 	width: 350px;
 }
 
-//
-// .card::after {
-// 	content: '';
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	height: 5px;
-// 	width: 100%;
-// }
+.card::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 100%;
+}
 
 .card-red::after {
 	background-color: hsl(0, 78%, 62%);
@@ -77,7 +76,6 @@ p {
 .card-push {
 	transform: translateY(50%);
 }
-
 .card:hover {
   box-shadow: 1px 8px 20px rgba(1, 0, 1, 0.55);
 }
@@ -105,5 +103,3 @@ footer {
 		transform: translateY(0);
 	}
 }
-
-/*# sou
