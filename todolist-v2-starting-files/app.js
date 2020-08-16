@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 mongoose.connect('mongodb://localhost:27017/todolistDB', {useNewUrlParser:true });
+//NEDD TO CONNECT BELOW Mongoose connecttion to Mongodb Cloud Atlas
+// mongoose.connect('mongodb+srv://root:0995@cluster0-2j0z7.mongodb.net/newdb', {useUnifiedTopology: true, useNewUrlParser: true  });
 //schma for model items
 const itemSchema={
   name: String
@@ -19,44 +21,66 @@ const itemSchema={
 }
 
 const Item = mongoose.model("Item", itemSchema);
+
 const items=[];
-const item = new Item({
-  name: "Welcome to the new to-do list"
+const day = date.getDate();
+
+const item1 = new Item ({
+  name: "Welcome to your todoList!!"
 });
+
 const item2 = new Item({
   name: "check box to tick-off todo item"
 });
 
-const item3 = new Item({
-  name: "<--Hit the button to add todo-->"
-});
 
-const defaultItems = [item, item2, item3];
-Item.insertMany(defaultItems, function(err){
-  if(err){
-    console.log(err);
-
-  }else{
-    console.log("sucessfully added defaul items in db");
-  }
-});
-
+const defaultItems = [item1, item2];
 
 app.get("/", function(req, res) {
-  const day = date.getDate();
 
   Item.find({}, function(err, foundItems){
-    console.log(foundItems);
-});
-  res.render("list", {listTitle: day, newListItems: items});
+
+    if(foundItems.length === 0){
+      Item.insertMany(defaultItems,function(err){
+        if (err){
+          console.log(err);
+        } else {
+          console.log ("Sucessfully saved default values");
+        }
+      });
+      res.redirect('/');
+    }else {
+      res.render("list", {listTitle: day, newListItems: foundItems});
+    }
+  });
 });
 
+
 app.post("/", function(req, res){
+
   const item = req.body.newItem;
-  items.push(item);
+
+  const item = new Item({
+    name: itemName
+  });
+  item.save();
   res.redirect("/");
 });
 
+app.post("/delete", function(req, res){
+  const checkedItemID = req.body.checkbox;
+  Item.findByIdAndRemove (checkedItemID, function(err){
+    if(!err){
+      console.log("successfully deleted item fromm database");
+      res.redirect("/");
+    }
+  });
+});
+
+// let port = process.env.PORT;
+// if (port == null || port == "") {
+//   port = 3000;
+// }
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
