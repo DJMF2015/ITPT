@@ -11,9 +11,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb://localhost:27017/todolistDB', {useNewUrlParser:true });
-//NEDD TO CONNECT BELOW Mongoose connecttion to Mongodb Cloud Atlas
+mongoose.connect('mongodb://localhost:27017/todolistDB', { useUnifiedTopology: true,  useNewUrlParser:true });
+//NEEDED TO CONNECT BELOW Mongoose connecttion to Mongodb Cloud Atlas
 // mongoose.connect('mongodb+srv://root:0995@cluster0-2j0z7.mongodb.net/newdb', {useUnifiedTopology: true, useNewUrlParser: true  });
+
 //schma for model items
 const itemSchema={
   name: String
@@ -33,11 +34,10 @@ const item2 = new Item({
   name: "check box to tick-off todo item"
 });
 
-
 const defaultItems = [item1, item2];
 
 app.get("/", function(req, res) {
-
+// find post and insert
   Item.find({}, function(err, foundItems){
 
     if(foundItems.length === 0){
@@ -56,9 +56,10 @@ app.get("/", function(req, res) {
 });
 
 
+// add post
 app.post("/", function(req, res){
 
-  const item = req.body.newItem;
+  const itemName = req.body.newItem;
 
   const item = new Item({
     name: itemName
@@ -67,6 +68,7 @@ app.post("/", function(req, res){
   res.redirect("/");
 });
 
+// delete post
 app.post("/delete", function(req, res){
   const checkedItemID = req.body.checkbox;
   Item.findByIdAndRemove (checkedItemID, function(err){
@@ -76,6 +78,10 @@ app.post("/delete", function(req, res){
     }
   });
 });
+
+
+// update post...........
+
 
 // let port = process.env.PORT;
 // if (port == null || port == "") {
