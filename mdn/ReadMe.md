@@ -14,7 +14,9 @@ The first two rulesets in the CSS resource file are yours, for FREE! After you'v
 
 - Next up, we'd like you to look at the four selectors, and calculate the specificity for each one. Write these down somewhere where they can be found later on, such as in a comment at the top of your CSS.
 - Now it's time to put the right selector on the right rule set! You've got four pairs of selector and ruleset to match in your CSS resources. Do this now, and add them to your CSS file.
+
 You need to:
+
 - Give the main card container a fixed width/height, solid background color, border, and border-radius (rounded corners!), amongst other things.
 Give the header a background gradient that goes from darker to lighter, plus rounded corners that fit in with the rounded corners set on the main card container.
 Give the footer a background gradient that goes from lighter to darker, plus rounded corners that fit in with the rounded corners set on the main card container.
@@ -24,23 +26,23 @@ Float the image to the right so that it sticks to the right hand side of the mai
 * New rulesets you need to write:
 
 - Write a ruleset that targets both the card header, and card footer, giving them both a computed total height of 50px (including a content height of 30px and padding of 10px on all sides.) But express it in ems.
-- The default margin applied to the <h2> and <p> elements by the browser will interfere with our design, so write a rule that targets all these elements and sets their margin to 0.
+- The default margin applied to the h2 and p elements by the browser will interfere with our design, so write a rule that targets all these elements and sets their margin to 0.
 To stop the image from spilling out of the main business card content (the <article> element), we need to give it a specific height. Set the <article>'s height to 120px, but expressed in ems.
 - Also give it a background color of semi-transparent black, resulting in a slightly darker shade that lets the background red color shine through a bit too.
-- Write a ruleset that gives the <h2> an effective font size of 20px (but expressed in ems) and an appropriate line height to place it in the center of the header's content box. Recall from earlier that the content box height should be 30px — this gives you all the numbers you need to calculate the line height.
-- Write a ruleset that gives the <p> inside the footer an effective font size of 15px (but expressed in ems) and an appropriate line height to place it in the center of the footer's content box. Recall from earlier that the content box height should be 30px — this gives you all the numbers you need to calculate the line height.
-- As a last little touch, give the paragraph inside the <article> an appropriate padding value so that its left edge lines up with the <h2> and footer paragraph, and set its color to be fairly light so it is easy to read.
+- Write a ruleset that gives the h2 an effective font size of 20 px (but expressed in ems) and an appropriate line height to place it in the center of the header's content box. Recall from earlier that the content box height should be 30px — this gives you all the numbers you need to calculate the line height.
+- Write a ruleset that gives the p inside the footer an effective font size of 15px (but expressed in ems) and an appropriate line height to place it in the center of the footer's content box. Recall from earlier that the content box height should be 30px — this gives you all the numbers you need to calculate the line height.
+- As a last little touch, give the paragraph inside the article an appropriate padding value so that its left edge lines up with the h2 and footer paragraph, and set its color to be fairly light so it is easy to read.
 
 #### Note:
-- Bear in mind that the second ruleset sets font-size: 10px; on the <html> element — this means that for any descendants of <html>, an em will be equal to 10px rather than 16px as it is by default. (This is of course, provided the descendants in question don't have any ancestors sitting in between them and <html> in the hierarchy that have a different font-size set on them. This could affect the values you need, although in this simple example this is not an issue.)
+- Bear in mind that the second ruleset sets font-size: 10px; on the html element — this means that for any descendants of html, an em will be equal to 10px rather than 16px as it is by default. (This is of course, provided the descendants in question don't have any ancestors sitting in between them and html in the hierarchy that have a different font-size set on them. This could affect the values you need, although in this simple example this is not an issue.)
 
 + Other things to think about:
 
 * You'll get bonus marks if you write your CSS for maximum readability, with a separate declaration on each line.
 You should include .card at the start of the selector chain in all your rules, so that these rules wouldn't interfere with the styling of any other elements if the business card were to be put on a page with a load of other content.
 
-#### "Write a ruleset that targets both the card header, and card footer..." (3 marks)
-- The correct rule should look something like this. Since the default font size as set on the <html> element is 10px, 1em is 10px, so the height (30px) should be represented by 3em, and the padding by 1em. 10 + 30 + 10 = 50.
+#### Write a ruleset that targets both the card header, and card footer...  (3 marks)
+- The correct rule should look something like this. Since the default font size as set on the html element is 10px, 1em is 10px, so the height (30px) should be represented by 3em, and the padding by 1em. 10 + 30 + 10 = 50.
 
-#### "The default margin applied to the <h2> and <p> elements by the browser will interfere with our design" (3 marks)
-- The correct rule should look something like this. Simply setting the margin to 0 on all paragraphs and the <h2> should be fine.
+#### The default margin applied to the h2 and p elements by the browser will interfere with our design (3 marks)
+- The correct rule should look something like this. Simply setting the margin to 0 on all paragraphs and the h2 should be fine.
